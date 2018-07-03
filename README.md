@@ -19,4 +19,4 @@ Game control instructions :
 5. say "cancel" to quit the game anytime while playing.
 6. when game is paused or stopped and alexa asks you whether to continue the game , you can reply as "yes" or "no" on whether to continue or not.
 
-![alt text](https://github.com/Mausam-Sharma/alexa_skill_do_or_die/edit/master/11.jpg)
+![alt text](https://github.com/Mausam-Sharma/alexa_skill_do_or_die/blob/master/11.jpg)
