@@ -34,3 +34,39 @@ function populateGameQuestions(translatedQuestions) {
   }
   return gameQuestions;
 }
+
+function populateRoundAnswers(
+  gameQuestionIndexes,
+  correctAnswerIndex,
+  correctAnswerTargetLocation,
+  translatedQuestions
+) {
+  const answers = [];
+  const translatedQuestion = translatedQuestions[gameQuestionIndexes[correctAnswerIndex]];
+  const answersCopy = translatedQuestion[Object.keys(translatedQuestion)[0]].slice();
+  let index = answersCopy.length;
+
+  if (index < ANSWER_COUNT) {
+    throw new Error('Not enough answers for question.');
+  }
+
+  // Shuffle the answers, excluding the first element which is the correct answer.
+  for (let j = 1; j < answersCopy.length; j += 1) {
+    const rand = Math.floor(Math.random() * (index - 1)) + 1;
+    index -= 1;
+
+    const swapTemp1 = answersCopy[index];
+    answersCopy[index] = answersCopy[rand];
+    answersCopy[rand] = swapTemp1;
+  }
+
+  // Swap the correct answer into the target location
+  for (let i = 0; i < ANSWER_COUNT; i += 1) {
+    answers[i] = answersCopy[i];
+  }
+  const swapTemp2 = answers[0];
+  answers[0] = answers[correctAnswerTargetLocation];
+  answers[correctAnswerTargetLocation] = swapTemp2;
+  return answers;
+}
+
