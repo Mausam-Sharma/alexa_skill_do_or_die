@@ -15,6 +15,22 @@ module.exports = {
         'Jump from the running vehicle',
       ],
     },
+    {
+      'You are standing on a lagoon barrier, just 150 yards from the beach , the ocean suddenly rises , and a wave of a size of a two story building rises in, and is going to slam against the barrier, like a runaway train. , Killer wave is few seconds away , what would you do ? ': [
+        'take cover of a rock and , hold on',
+        'Drop down and lie flat',     
+        'jump as the wave hits and, body surf to safety',
+        'try running away from the place',
+      ],
+    },
+    {
+      'you are working in your office, at your desk, all of a sudden, the building as well as the things around you, start shivering, yes that\'s an earthquake. Now, in this situation, What would you do ? ': [
+        'take cover under your desk furniture and, hold on till shaking stops',
+        'take shelter under doorway',
+        'rush outside office towards open space, away from building',
+        'run towards the terrace',
+      ],
+    },
     
  ],
    
