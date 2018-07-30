@@ -70,3 +70,16 @@ function populateRoundAnswers(
   return answers;
 }
 
+function isAnswerSlotValid(intent) {
+  const answerSlotFilled = intent
+    && intent.slots
+    && intent.slots.Answer
+    && intent.slots.Answer.value;
+  const answerSlotIsInt = answerSlotFilled
+    && !Number.isNaN(parseInt(intent.slots.Answer.value, 10));
+  return answerSlotIsInt
+    && parseInt(intent.slots.Answer.value, 10) < (ANSWER_COUNT + 1)
+    && parseInt(intent.slots.Answer.value, 10) > 0;
+}
+
+
