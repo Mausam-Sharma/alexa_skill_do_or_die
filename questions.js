@@ -31,23 +31,6 @@ module.exports = {
         'run towards the terrace',
       ],
     },
-    {
-      'Your friend has participated, in a pastry eating competition. Suddenly, pastry got stuck in his food pipe, and even after drinking a lot of water, she is choking to death. Now, in this situation, What would you do? ': [
-        'begin abdominal thrusts',
-        'begin mouth-to-mouth resuscitation',
-        'hit on her back',
-        'call ambulance and wait for a doctor to do something',
-      ],
-    },
-    
-    {
-      'You are cycling alone, on a mountaineous road , in a forest , suddenly ,a group of dogs, used to herd sheep, surrounds you and , they are trying to attack you. Now, in this situation, What would you do ? ': [
-        'Be Aggressive, shout loudly and make a lot of noise',
-        'Stay calm and ride away',
-        'Drop and Submit',
-        'fold your arms and stand idle ',
-       ],
-    },
     
  ],
    
