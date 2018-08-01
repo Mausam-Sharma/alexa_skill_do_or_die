@@ -219,6 +219,16 @@ function startGame(newGame, handlerInput) {
     .withSimpleCard(requestAttributes.t('GAME_NAME'), repromptText)
     .getResponse();
 }
+function helpTheUser(newGame, handlerInput) {
+  const requestAttributes = handlerInput.attributesManager.getRequestAttributes();
+  const askMessage = newGame
+    ? requestAttributes.t('ASK_MESSAGE_START')
+    : requestAttributes.t('REPEAT_QUESTION_MESSAGE') + requestAttributes.t('STOP_MESSAGE');
+  const speechOutput = requestAttributes.t('HELP_MESSAGE', GAME_LENGTH) + askMessage;
+  const repromptText = requestAttributes.t('HELP_REPROMPT') + askMessage;
+
+  return handlerInput.responseBuilder.speak(speechOutput).reprompt(repromptText).getResponse();
+}
 
 
 
