@@ -115,6 +115,7 @@ function handleUserGuess(userGaveUp, handlerInput) {
       correctAnswerText
     );
   }
+  
 
   // Check if we can exit the game session after GAME_LENGTH questions (zero-indexed)
   if (sessionAttributes.currentQuestionIndex === GAME_LENGTH - 1) {
@@ -167,6 +168,53 @@ function handleUserGuess(userGaveUp, handlerInput) {
   });
 
   return responseBuilder.speak(speechOutput)
+    .reprompt(repromptText)
+    .withSimpleCard(requestAttributes.t('GAME_NAME'), repromptText)
+    .getResponse();
+}
+
+function startGame(newGame, handlerInput) {
+  const requestAttributes = handlerInput.attributesManager.getRequestAttributes();
+  let speechOutput = newGame
+    ? requestAttributes.t('NEW_GAME_MESSAGE', requestAttributes.t('GAME_NAME'))
+      + requestAttributes.t('WELCOME_MESSAGE', GAME_LENGTH.toString())
+    : '';
+  const translatedQuestions = requestAttributes.t('QUESTIONS');
+  const gameQuestions = populateGameQuestions(translatedQuestions);
+  const correctAnswerIndex = Math.floor(Math.random() * (ANSWER_COUNT));
+
+  const roundAnswers = populateRoundAnswers(
+    gameQuestions,
+    0,
+    correctAnswerIndex,
+    translatedQuestions
+  );
+  const currentQuestionIndex = 0;
+  const spokenQuestion = Object.keys(translatedQuestions[gameQuestions[currentQuestionIndex]])[0];
+  let repromptText = requestAttributes.t('TELL_QUESTION_MESSAGE', '1', spokenQuestion);
+  for (let i = 0; i < ANSWER_COUNT; i += 1) {
+    repromptText += `${i + 1}. ${roundAnswers[i]}. `;
+  }
+
+  speechOutput += repromptText;
+  const sessionAttributes = {};
+
+  const translatedQuestion = translatedQuestions[gameQuestions[currentQuestionIndex]];
+
+  Object.assign(sessionAttributes, {
+    speechOutput: repromptText,
+    repromptText,
+    currentQuestionIndex,
+    correctAnswerIndex: correctAnswerIndex + 1,
+    questions: gameQuestions,
+    score: 0,
+    correctAnswerText: translatedQuestion[Object.keys(translatedQuestion)[0]][0]
+  });
+
+  handlerInput.attributesManager.setSessionAttributes(sessionAttributes);
+
+  return handlerInput.responseBuilder
+    .speak(speechOutput)
     .reprompt(repromptText)
     .withSimpleCard(requestAttributes.t('GAME_NAME'), repromptText)
     .getResponse();
