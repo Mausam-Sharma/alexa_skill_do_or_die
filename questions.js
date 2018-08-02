@@ -48,6 +48,14 @@ module.exports = {
         'fold your arms and stand idle ',
        ],
     },
+    {
+      'You are skiing on a mountain, suddenly you fall into a deadly trap, called tree well, which is a deep void around the base of a tree, concealed by loose snow. You somehow, managed to call emergency services with your phone , but now, you have to struggle until they rescue you. Now, in this situation, What would you do ? ': [
+        'use your hands to cover your mouth and wait for rescue team',
+        'twist your legs to create an opening',
+        'pull yourself closer to tree trunk and take shelter in tree well',
+        'remain idle in your position and start yelling for help',
+       ],
+    },
     
  ],
    
