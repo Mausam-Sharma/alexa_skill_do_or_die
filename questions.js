@@ -57,6 +57,33 @@ module.exports = {
        ],
     },
     
+    {
+      'You are on your regular, morning walk , suddenly , a stray dog starts barking on you ,and within a moment, he is raging towards you to attack . Now , what would you do ? ': [
+        'Drop and Submit and play dead, avoiding eye contact ',
+        'raise your arm and look threatening',
+        'Jump on to a nearby car',
+        'shout and make a lot of noise',
+        'run away as fast as possible',
+       ],
+    },
+    {
+      'You are having fun with white water kayaking in a river, suddenly you got stuck in a devastating vortex, you along with your kayak is revolving, in so called natural washing machine, people around there, throw ropes towards you as lifelines. Now, in this situation, What would you do ? ': [
+        'curl into a ball and turtle up',
+        'Fight to keep your head above water',
+        'Try to grab a lifeline around your body',
+        'loose yourself into natural vortex flow',
+       ],
+    },
+    {
+      'Suppose, you are working in your backyard lawn. Suddenly, a venomous snake, hidden there in the shrubs, attacks you on your hand, instantly delivering a potentially deadly dose of hemotoxic venom, now with uncontrollable bleeding, What would you do ? ': [
+        'carefully wash the wound with soap and water, call ambulance and stay calm until you get medical assistance',
+        'rush to find something to stop the flow of blood by making a tourniquet',
+        'cut the wound and suck out the poison',
+        'rush to the hospital to get medical assistance ',
+       ],
+    },
+    
+    
  ],
    
  
