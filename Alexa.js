@@ -299,3 +299,31 @@ const LocalizationInterceptor = {
 };
 
 
+const LaunchRequest = {
+  canHandle(handlerInput) {
+    const { request } = handlerInput.requestEnvelope;
+
+    return request.type === 'LaunchRequest'
+      || (request.type === 'IntentRequest'
+        && request.intent.name === 'AMAZON.StartOverIntent');
+  },
+  handle(handlerInput) {
+    return startGame(true, handlerInput);
+  },
+};
+
+
+const HelpIntent = {
+  canHandle(handlerInput) {
+    const { request } = handlerInput.requestEnvelope;
+
+    return request.type === 'IntentRequest' && request.intent.name === 'AMAZON.HelpIntent';
+  },
+  handle(handlerInput) {
+    const sessionAttributes = handlerInput.attributesManager.getSessionAttributes();
+
+    const newGame = !(sessionAttributes.questions);
+    return helpTheUser(newGame, handlerInput);
+  },
+};
+
