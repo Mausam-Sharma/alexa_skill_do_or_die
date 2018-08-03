@@ -82,6 +82,31 @@ module.exports = {
         'rush to the hospital to get medical assistance ',
        ],
     },
+    {
+      'You are on an african safari, in an open vehicle. Your vehicle comes inbetween a baby elephant and his overprotective mother. All of a sudden, this raging mother elephant slams into your vehicle and you are thrown out with your vehicle overturned. Now, in this situation, What would you do ? ': [
+        'go inside the vehicle and scare off the elephant, by making a lot of noise with your car horn',
+        'duck behind the overturned car',
+        'climb the nearest tree',
+        'run away as far as you can ',
+       ],
+    },
+    {
+      'You are on a boat with your friends, in an ocean 50 miles away from shore, suddenly a marlin has made a run at your boat and jumped right over the railing. A marlin is a billfish that can launch itself up to 10 feets, and has a sword like bill. This ocean predator\'s powerful body is thrashing with enough force to take you out. Now, in this situation, What would you do ? ': [
+        'throw a towel over it\'s eyes and then push it back into water',
+        'sieze the tail and pull over the railing',
+        'grab the marlin by it\'s bill and push it back into the water',
+        'jump into the sea to save yourself from marlin',
+       ],
+    },
+    {
+      'You are in a zoo, and you see that a tourist crossed 2 safety barriers, to get a closer picture of a polar bear, and suddenly is now caught in the jaws of the bear. You instantly take some branches of a tree to take some action.  Now, in this situation, What would you do ? ': [
+        'beat the branches against the ground',
+        'pry open the bear\'s mouth with the branch',
+        'hit sensitive organs of bear with branches such as it\'s eyes',
+        'call the safety officials and wait for them to handle the case ',
+       ],
+    },
+    
     
     
  ],
