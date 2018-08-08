@@ -327,3 +327,39 @@ const HelpIntent = {
   },
 };
 
+const UnhandledIntent = {
+  canHandle() {
+    return true;
+  },
+  handle(handlerInput) {
+    const sessionAttributes = handlerInput.attributesManager.getSessionAttributes();
+    const requestAttributes = handlerInput.attributesManager.getRequestAttributes();
+    if (Object.keys(sessionAttributes).length === 0) {
+      const speechOutput = requestAttributes.t('START_UNHANDLED');
+      return handlerInput.attributesManager
+        .speak(speechOutput)
+        .reprompt(speechOutput)
+        .getResponse();
+    } else if (sessionAttributes.questions) {
+      const speechOutput = requestAttributes.t('TRIVIA_UNHANDLED', ANSWER_COUNT.toString());
+      return handlerInput.attributesManager
+        .speak(speechOutput)
+        .reprompt(speechOutput)
+        .getResponse();
+    }
+    const speechOutput = requestAttributes.t('HELP_UNHANDLED');
+    return handlerInput.attributesManager.speak(speechOutput).reprompt(speechOutput).getResponse();
+  },
+};
+const SessionEndedRequest = {
+  canHandle(handlerInput) {
+    return handlerInput.requestEnvelope.request.type === 'SessionEndedRequest';
+  },
+  handle(handlerInput) {
+    console.log(`Session ended with reason: ${handlerInput.requestEnvelope.request.reason}`);
+
+    return handlerInput.responseBuilder.getResponse();
+  },
+};
+
+
