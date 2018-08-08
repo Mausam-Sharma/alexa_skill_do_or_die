@@ -390,3 +390,75 @@ const RepeatIntent = {
   },
 };
 
+const YesIntent = {
+  canHandle(handlerInput) {
+    return handlerInput.requestEnvelope.request.type === 'IntentRequest'
+        && handlerInput.requestEnvelope.request.intent.name === 'AMAZON.YesIntent';
+  },
+  handle(handlerInput) {
+    const sessionAttributes = handlerInput.attributesManager.getSessionAttributes();
+    if (sessionAttributes.questions) {
+      return handlerInput.responseBuilder.speak(sessionAttributes.speechOutput)
+        .reprompt(sessionAttributes.repromptText)
+        .getResponse();
+    }
+    return startGame(false, handlerInput);
+  },
+};
+
+
+const StopIntent = {
+  canHandle(handlerInput) {
+    return handlerInput.requestEnvelope.request.type === 'IntentRequest'
+        && handlerInput.requestEnvelope.request.intent.name === 'AMAZON.StopIntent';
+  },
+  handle(handlerInput) {
+    const requestAttributes = handlerInput.attributesManager.getRequestAttributes();
+    const speechOutput = requestAttributes.t('STOP_MESSAGE');
+
+    return handlerInput.responseBuilder.speak(speechOutput)
+      .reprompt(speechOutput)
+      .getResponse();
+  },
+};
+
+const CancelIntent = {
+  canHandle(handlerInput) {
+    return handlerInput.requestEnvelope.request.type === 'IntentRequest'
+      && handlerInput.requestEnvelope.request.intent.name === 'AMAZON.CancelIntent';
+  },
+  handle(handlerInput) {
+    const requestAttributes = handlerInput.attributesManager.getRequestAttributes();
+    const speechOutput = requestAttributes.t('CANCEL_MESSAGE');
+
+    return handlerInput.responseBuilder.speak(speechOutput)
+      .getResponse();
+  },
+};
+
+const NoIntent = {
+  canHandle(handlerInput) {
+    return handlerInput.requestEnvelope.request.type === 'IntentRequest'
+      && handlerInput.requestEnvelope.request.intent.name === 'AMAZON.NoIntent';
+  },
+  handle(handlerInput) {
+    const requestAttributes = handlerInput.attributesManager.getRequestAttributes();
+    const speechOutput = requestAttributes.t('NO_MESSAGE');
+    return handlerInput.responseBuilder.speak(speechOutput).getResponse();
+  },
+};
+
+const ErrorHandler = {
+  canHandle() {
+    return true;
+  },
+  handle(handlerInput, error) {
+    console.log(`Error handled: ${error.message}`);
+
+    return handlerInput.responseBuilder
+      .speak('Sorry, I can\'t understand the command. Please say again.')
+      .reprompt('Sorry, I can\'t understand the command. Please say again.')
+      .getResponse();
+  },
+};
+
