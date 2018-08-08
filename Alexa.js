@@ -363,3 +363,30 @@ const SessionEndedRequest = {
 };
 
 
+const AnswerIntent = {
+  canHandle(handlerInput) {
+    return handlerInput.requestEnvelope.request.type === 'IntentRequest'
+        && (handlerInput.requestEnvelope.request.intent.name === 'AnswerIntent'
+        || handlerInput.requestEnvelope.request.intent.name === 'DontKnowIntent');
+  },
+  handle(handlerInput) {
+    if (handlerInput.requestEnvelope.request.intent.name === 'AnswerIntent') {
+      return handleUserGuess(false, handlerInput);
+    }
+    return handleUserGuess(true, handlerInput);
+  },
+};
+
+const RepeatIntent = {
+  canHandle(handlerInput) {
+    return handlerInput.requestEnvelope.request.type === 'IntentRequest'
+        && handlerInput.requestEnvelope.request.intent.name === 'AMAZON.RepeatIntent';
+  },
+  handle(handlerInput) {
+    const sessionAttributes = handlerInput.attributesManager.getSessionAttributes();
+    return handlerInput.responseBuilder.speak(sessionAttributes.speechOutput)
+      .reprompt(sessionAttributes.repromptText)
+      .getResponse();
+  },
+};
+
