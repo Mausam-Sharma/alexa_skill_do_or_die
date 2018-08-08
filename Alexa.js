@@ -462,3 +462,21 @@ const ErrorHandler = {
   },
 };
 
+
+const skillBuilder = Alexa.SkillBuilders.custom();
+exports.handler = skillBuilder
+  .addRequestHandlers(
+    LaunchRequest,
+    HelpIntent,
+    AnswerIntent,
+    RepeatIntent,
+    YesIntent,
+    StopIntent,
+    CancelIntent,
+    NoIntent,
+    SessionEndedRequest,
+    UnhandledIntent
+  )
+  .addRequestInterceptors(LocalizationInterceptor)
+  .addErrorHandlers(ErrorHandler)
+  .lambda();
