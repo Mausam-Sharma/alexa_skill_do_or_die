@@ -122,6 +122,46 @@ module.exports = {
         'go towards the surface of sea',
        ],
     },
+    {
+      'You and your friends are flying home, after an afternoon exploring the wilderness. You are piloting the aircraft, suddenly, aircraft begins to lose power and is falling down, this is due to invisible killer, called high density altitutde, in which the air become dangerously thin. Now, in this situation, What would you do ? ': [
+        'open the door and cover your head',
+        'climb in the back seat',
+        'put your head down',
+        'jump from falling plane just a moment before it crashes to ground',
+       ],
+    },
+    {
+      'You are diving in the sea of Cortez, when a massive bull elephant seal, approaches and turns on you, Now, to escape from this underwater attack, What would you do ? ': [
+        'swat at the seal\'s proboscis',
+        'bang on your tank to scare the seal away',
+        'dive deep below the danger and wait it out',
+        'go towards the surface of sea',
+       ],
+    },
+    {
+      'You are in the wildlife rescue team, and you have been called to remove the most powerful snake in the world, from center of a small town, yes, that\'s an anaconda. You and 4 other members of team are handling the snake, suddenly, the snake grabs your hand, now you have few seconds before snake envelops you with it\'s deadly coils. Now, in this situation, What would you do ? ': [
+        'push your arm farther down the snake\'s throat away from curved teeth',
+        'try to hit the head of the snake with a heavy object',
+        'press your knee against the snake\'s throat to cut off it\'s air supply',
+        'drop onto it\'s back and try to pry open it\'s jaws from behind ',
+       ],
+    },
+    {
+      'you and your family are returning home from a trip in your car. On the highway, you see a giant wall of flames headed straight for your car on one side of the highway. Initially, you are unable to sense the danger, you keep on moving, but suddenly temperature rises,and you punch the gas of your car, but just powering through is no longer an option, you consider a u turn but it is too late, fire has surrounded you. Now, from this natural oven, how would you escape ? ': [
+        'pull over and turn on the air conditioner',
+        'drive through the flames to an area that is already burned out',
+        'go off road and and speed away from advancing fire',
+        'stop the car on highway and call emergency services to rescue you',
+       ],
+    },
+    {
+      'You are surfing the waves, suddenly you slip down from your surfing board, and now you have fallen in the white water, under the risk of being killed by a huge wave behind you. Now, in this situation, What would you do ? ': [
+        'take a breath and stay limber',
+        'swim with the wave',
+        'swim towards the light',
+        'try to find your surfing board and swim towards it',
+       ],
+    },
     
     
     
