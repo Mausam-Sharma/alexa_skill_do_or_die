@@ -106,6 +106,22 @@ module.exports = {
         'call the safety officials and wait for them to handle the case ',
        ],
     },
+    {
+      'You and your friends are flying home, after an afternoon exploring the wilderness. You are piloting the aircraft, suddenly, aircraft begins to lose power and is falling down, this is due to invisible killer, called high density altitutde, in which the air become dangerously thin. Now, in this situation, What would you do ? ': [
+        'open the door and cover your head',
+        'climb in the back seat',
+        'put your head down',
+        'jump from falling plane just a moment before it crashes to ground',
+       ],
+    },
+    {
+      'You are diving in the sea of Cortez, when a massive bull elephant seal, approaches and turns on you, Now, to escape from this underwater attack, What would you do ? ': [
+        'swat at the seal\'s proboscis',
+        'bang on your tank to scare the seal away',
+        'dive deep below the danger and wait it out',
+        'go towards the surface of sea',
+       ],
+    },
     
     
     
