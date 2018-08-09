@@ -163,6 +163,47 @@ module.exports = {
        ],
     },
     
+    {
+      'You are driving your car in a thunderstorm, suddenly you observe a tornado coming towards you, you tried to flee away, but had taken a turn in wrong direction, and there is no road ahead. behind you is a terrible tornado with a wind speed of 195 kilometres per hour. Now, from this natural devastating blender, how would you save yourself ? ': [
+        'leave your car alone and lie flat on the ground away from car',
+        'take shelter under some overpass ',
+        'roll down windows and stay put',
+        'leave the car and start running away from tornado',
+       ],
+    },
+    {
+      'You are a professional mountain biker, riding your bike in the craggy canyon trails over utah. While riding, you lift off your bicycle for a dangerous jump above 80 metres high trench, but something goes wrong, and you are about to crash down on the surface with a speed of 80 miles per hour. Now, to minimise the damage, What would you do ? ': [
+        'bend your knees and try to roll over after crash',
+        'keep your hands on the handlebars and stay with your bike',
+        'land on your hands and feet',
+        'do nothing and let gravity do the work',
+       ],
+    },
+    {
+      'You are on a deck boat just near the shore, which has just swamped by another ship\'s wake, now it\'s taking on water at an alarming rate, and then suddenly, slams against a barge. Now, when your boat is about to sink, What would you do ? ': [
+        'Bail out and swim away from ship',
+        'move to the back of the seat and stay with it for as long as possible',
+        'gun the engine to move boat away from barge',
+        'wait for the rescue team to save you',
+       ],
+    },
+    {
+      'You are a base jumper, and you leap off a mile high mountain next to a lake, wearing specially designed wingsuit, 500 feet above the ground, you deploy your parachute, but parachute opens facing the wrong way and slams you into a solid rock wall, spiraling from the hit, your parachute lines twist and you swing back to the cliff. now, when you are few seconds away from death, What would you do ? ': [
+        'kick away from the cliff wall and aim for a soft landing',
+        'scissor kick to untwist the parachute lines',
+        'release the parachute and glide to lake',
+        'try to move closer to the cliff wall',
+       ],
+    },
+    {
+      'Anza Borrego desert state park is an off roading paradise in California. The park\'s most hazardous drop off, is a treacherous 60 degree slope, aptly called heart attack hill. Suppose you are driver of a 4 wheeler off road vehicle, you don\'t have a seat belt, and as you start descending the hill, your vehicle suddenly loses balance, and is on the verge of rolling. Now, in this situation, What would you do ? ': [
+        'brace your feet against the floorboards and lean towards the passenger seat',
+        'jump out of the jeep before it begins to roll',
+        'put the vehicle in reverse gear and try to move vehicle backwards up the hill',
+        'grip the wheel and steer away from the roll',
+       ],
+    },
+    
     
     
  ],
