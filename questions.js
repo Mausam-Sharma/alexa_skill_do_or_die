@@ -203,10 +203,34 @@ module.exports = {
         'grip the wheel and steer away from the roll',
        ],
     },
+   
     
+    {
+      'Suppose there is a train standing idle on the tracks, and you are trying to cross the tracks from under the standing train, all of a sudden, train starts moving, and you got stuck in the empty space between two rails of a track, with tons of lethal steel overhead. Train is moving at a speed of 11 miles per hour, and you have a 4 second window between the pass of each wheel. Now, trapped under this speeding train, What would you do? ': [
+        'lie flat, stay close to the ground, and try to be in the clearance between the train and the ground',
+        'time your escape and crawl out between the moving wheels',
+        'use your backpack to hook onto the train and pull yourself up',
+        'pray to god and hope for best',
+       ],
+    },
+    {
+      'You are at a gas filling station. An old man is filling up his plastic can with gas in the back of his pickup truck. The man is sticking the metal nozzle into the plastic can, suddenly the flowing gas builds up a static charge, that ignites all the gasoline vapors in the air, and a fire erupts, the man panics and throws the gas container covering himself in fuel, terrified and burning, he drops and rolls, but nothing happens. Now, being a bystander, What would you do ? ': [
+        'tell him to keep rolling and smoother the flames',
+        'call the fire fighters and wait for them to take any action',
+        'use your jacket to beat out the fire',
+        'dump gas station\'s window cleaner over the fire',
+       ],
+    },
+    {
+      'You are driving a truck on an icy road, road is made of asphalt on which ice has been accumulated, making the road smooth, slick and dangerous. Now, you apply your brakes while driving, but the truck keeps going, and skidding on the icy road. Now, to survive from this terrifying skid, What would you do ? ': [
+        'let off the gas and let your back wheels lead the way',
+        'watch for hazards ahead on the road and accelerate to re establish your grip on the road',
+        'apply slow constant pressure to the brakes',
+        'jump from the running truck',
+       ],
+    },
     
-    
- ],
+  ],
    
  
     
